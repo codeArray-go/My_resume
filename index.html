@@ -1,137 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resume | Akhil Singh Bhndari</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @font-face {
-            font-family: 'cmu';
-            src: url('cmu.serif-roman.ttf');
-        }
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-        body {
-            font-family: 'cmu';
-        }
+      @font-face {
+        font-family: "cmu";
+        src: url("cmu.serif-roman.ttf");
+      }
 
-        p,
-        li {
-            font-size: 15px;
-        }
+      @font-face {
+        font-family: "Nunito";
+        src: url();
+      }
+
+      .Nunito {
+        font-family: Nunito;
+      }
+
+      body {
+        font-family: "cmu";
+      }
+
+      p,
+      li {
+        font-size: 15px;
+      }
+
+      .list {
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.08);
+        border-radius: 10px;
+        text-align: center;
+        font-weight: 600;
+        margin-bottom: 12px;
+        font-size: 16px;
+        cursor: pointer;
+        padding: 12px;
+      }
+      .list:hover {
+        background-color: rgba(255, 255, 255, 0.178);
+      }
     </style>
-</head>
+  </head>
 
-<body class="bg-white text-gray-900 px-6">
-    <div class="max-w-3xl mx-auto relative">
-        <!-- Header -->
-        <header class="mb-6 flex items-center flex-col">
-            <h1 class="text-3xl font-bold">Akhil Singh Bhandari<h1>
-                    <p class="text-sm text-gray-600">akhibhandari585@gmail.com | +91-8882601382 |
-                        <a href="https://www.linkedin.com/in/akhil-singh-bhandari-4267a4310" target="_blank"
-                            class="text-blue-700 underline">LinkedIn</a> |
-                        <a href="https://github.com/codeArray-go" target="_blank"
-                            class="text-blue-700 underline">GitHub</a> |
-                        <a href="https://my-port-folio-dun-three.vercel.app/" target="_blank"
-                            class="text-blue-700 underline">PortFolio</a>
-                    </p>
-        </header>
+  <body class="bg-white text-gray-900">
+    <!-- Helping container -->
+    <div class="relative text-black">
+      <p
+        id="hlepNavigation"
+        class="block rounded-xl p-3 pe-20 border border-black fixed bottom-10 right-10"
+      >
+        To, contact developer
+      </p>
+      <a
+        id="toggleButton"
+        class="fixed bottom-10 right-10 cursor-pointer rounded-full p-2 font-semibold bg-gray-800 text-white shadow-gray-500 shadow-xl"
+      >
+        <img src="QuestionMark.svg" alt="download_button" />
+      </a>
 
-        <!-- Summary -->
-        <section class="mb-4">
-            <h2 class="text-[18px] font-semibold border-b border-gray-300">Summary</h2>
-            <p class="mt-2">
-                MERN Stack developer with experience in building full-stack applications using React.js, Next.js,
-                Node.js, Express, and MongoDB. Skilled in creating responsive layouts with HTML, CSS, and Tailwind CSS,
-                and in managing code with Git and GitHub. Able to take projects from development to deployment using
-                platforms like Vercel and Render.
-            </p>
-        </section>
+      <div
+        id="MainBox"
+        class="fixed bottom-24 right-16 h-[450px] w-[350px] rounded-xl rounded-br-none bg-green-50 shadow-lg shadow-gray-400 list-none z-10"
+      >
+        <h1
+          class="mb-2 rounded-lg border-gray-300 border-b text-center text-gray-600 font-bold text-xl Nunito p-5"
+        >
+          Billu Bhasanda
+        </h1>
+        <div class="w-full h-[70%] p-2 Nunito overflow-y-scroll">
+          <div class="w-full mb-2">
+            <li class="bg-gray-300 w-fit px-6 py-1 rounded-xl rounded-tl-sm">
+              Hi
+            </li>
+          </div>
+          <div class="w-full flex justify-end mb-2">
+            <li class="bg-gray-500 text-white w-fit px-6 py-1 rounded-xl rounded-br-sm">
+              Hi
+            </li>
+          </div>
+        </div>
 
-        <!-- Technical Skills -->
-        <section class="mb-4">
-            <h2 class="text-[18px] font-semibold border-b border-gray-300">Technical Skills</h2>
-            <div class="ml-6">
-                <li class="mt-2"><strong>Lnguage Known: </strong>JavaScript, TypeScript, Java</li>
-                <li><strong>Frontend: </strong>HTML, CSS, JavaScript, React.js, Next.js, Tailwind
-                    CSS.</li>
-                <li><strong>Backend:</strong> Next.js, Node.js, Express.js</li>
-                <li><strong>Database:</strong> MongoDB</li>
-                <li><strong>Deployment:</strong> Vercel, Render, GitHub</li>
-                <li><strong>Tools:</strong> Nvim, VsCode, Git, GitHub, npm</li>
-            </div>
-        </section>
-
-        <!-- Projects -->
-        <section class="mb-4">
-            <h2 class="text-[18px] font-semibold border-b border-gray-300">Projects</h2>
-            <ul class="list-none mt-2 space-y-1">
-                <ul>
-                    <li><span class="font-black">Scalable LinkTree</span> <br> Tech: Next.js, Tailwind CSS, MongoDB,
-                        NextAuth </li>
-                    <li class="list-disc ml-10 mb-2">Built a customizable link-sharing platform with secure manual
-                        authentication, allowing users
-                        to generate personalized profiles.
-                    </li>
-                    <li class="list-disc ml-10 mb-2 -mt-2"><span class="font-bold">Link:</span>
-                        <a class="text-blue-700 hover:underline" href="https://all-links-f.vercel.app/"
-                            target="_blank">https://all-links-f.vercel.app/</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li><strong>Linphase Technology Website</strong> <br> Tech: Next.js, tailwindcss </li>
-                    <li class="list-disc ml-10 mb-2">Built with Next for an engaging user experience.
-                    </li>
-                    <li class="list-disc ml-10 mb-2 -mt-2"><span class="font-bold">Link:</span>
-                        <a class="text-blue-700 hover:underline" href="http://linphasetechnology.com/"
-                            target="_blank">http://linphasetechnology.com/</a>
-                    </li>
-                </ul>
-            </ul>
-        </section>
-
-
-        <!-- Achievements -->
-        <section class="mb-4 mt-3">
-            <h2 class="text-[18px] font-semibold border-b border-gray-300">Certifications </h2>
-            <ul class="list-disc ml-6 mt-2 space-y-1">
-                <li>AWS Solutions Architecture Job Simulation. </li>
-                <li class="list-disc mb-2 -mt-2"><span class="font-bold">Link:</span>
-                        <a class="text-blue-700 hover:underline" href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/pmnMSL4QiQ9JCgE3W/kkE9HyeNcw6rwCRGw_pmnMSL4QiQ9JCgE3W_CQ2Fb84gcNCMwBK7T_1734100419083_completion_certificate.pdf"
-                            target="_blank">My certificate.</a>
-                    </li>
-            </ul>
-        </section>
-
-
-        <!-- Education -->
-        <section class="mb-4">
-            <h2 class="text-[18px] font-semibold border-b border-gray-300">Education</h2>
-
-            <div class="mt-2">
-                <p class="font-semibold">Chandigarh University</p>
-                <ul class="ml-6 list-disc">
-                    <li>Bachelor of Computer Applications (BCA)</li>
-                    <li class="-mt-1">Currently Pursuing – 2<sup>nd</sup> Year (Distance Learning)</li>
-                </ul>
-            </div>
-
-            <div class="mt-4">
-                <p class="font-semibold">Self-Taught Web Developer</p>
-                <p>
-                    Acquired practical skills in front-end and full-stack development through independent learning
-                    using AI tools, online tutorials, and developer resources on social platforms.
-                </p>
-            </div>
-        </section>
-
-
+        <div
+          class="border-gray-300 border-t w-full py-2 absolute bottom-0 left-0 rounded-bl-xl"
+        >
+          <input
+            type="text"
+            placeholder="start typing..."
+            class="w-[95%] p-2 px-4 text-black block mx-auto bg-gray-300 rounded-l-xl rounded-r-full focus:outline-none"
+          />
+          <div
+            class="absolute bottom-2 right-2 bg-white rounded-full p-2 cursor-pointer"
+          >
+            <img src="Send.svg" alt="send" class="h-6 w-6" />
+          </div>
+        </div>
+      </div>
     </div>
-</body>
 
+    <main class="max-w-3xl mx-44 relative" id="pdf-content">
+      <!-- Header -->
+      <header class="mb-6 flex items-center flex-col">
+        <h1 class="text-3xl font-bold">Akhil Singh Bhandari</h1>
+        <p class="text-sm text-gray-600">
+          akhibhandari585@gmail.com | +91-8882601382 |
+          <a
+            href="https://www.linkedin.com/in/akhil-singh-bhandari-4267a4310"
+            target="_blank"
+            class="text-blue-700 underline"
+            >LinkedIn</a
+          >
+          |
+          <a
+            href="https://github.com/codeArray-go"
+            target="_blank"
+            class="text-blue-700 underline"
+            >GitHub</a
+          >
+          |
+          <a
+            href="https://my-port-folio-dun-three.vercel.app/"
+            target="_blank"
+            class="text-blue-700 underline"
+            >PortFolio</a
+          >
+        </p>
+      </header>
+
+      <!-- Summary -->
+      <section class="mb-4">
+        <h2 class="text-[18px] font-semibold border-b border-gray-300">
+          Summary
+        </h2>
+        <p class="mt-2">
+          MERN Stack developer with experience in building full-stack
+          applications using React.js, Next.js, Node.js, Express, and MongoDB.
+          Skilled in creating responsive layouts with HTML, CSS, and Tailwind
+          CSS, and in managing code with Git and GitHub. Able to take projects
+          from development to deployment using platforms like Vercel and Render.
+        </p>
+      </section>
+
+      <!-- Technical Skills -->
+      <section class="mb-4">
+        <h2 class="text-[18px] font-semibold border-b border-gray-300">
+          Technical Skills
+        </h2>
+        <div class="ml-6">
+          <li class="mt-2">
+            <strong>Lnguage Known: </strong>JavaScript, TypeScript, Java
+          </li>
+          <li>
+            <strong>Frontend: </strong>HTML, CSS, JavaScript, React.js, Next.js,
+            Tailwind CSS.
+          </li>
+          <li><strong>Backend:</strong> Next.js, Node.js, Express.js</li>
+          <li><strong>Database:</strong> MongoDB</li>
+          <li><strong>Deployment:</strong> Vercel, Render, GitHub</li>
+          <li><strong>Tools:</strong> Nvim, VsCode, Git, GitHub, npm</li>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section class="mb-4">
+        <h2 class="text-[18px] font-semibold border-b border-gray-300">
+          Projects
+        </h2>
+        <ul class="list-none mt-2 space-y-1">
+          <ul>
+            <li>
+              <span class="font-black">Scalable LinkTree</span> <br />
+              Tech: Next.js, Tailwind CSS, MongoDB, NextAuth
+            </li>
+            <li class="list-disc ml-10 mb-2">
+              Built a customizable link-sharing platform with secure manual
+              authentication, allowing users to generate personalized profiles.
+            </li>
+            <li class="list-disc ml-10 mb-2 -mt-2">
+              <span class="font-bold">Link:</span>
+              <a
+                class="text-blue-700 hover:underline"
+                href="https://all-links-f.vercel.app/"
+                target="_blank"
+                >https://all-links-f.vercel.app/</a
+              >
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <strong>Linphase Technology Website</strong> <br />
+              Tech: Next.js, tailwindcss
+            </li>
+            <li class="list-disc ml-10 mb-2">
+              Built with Next for an engaging user experience.
+            </li>
+            <li class="list-disc ml-10 mb-2 -mt-2">
+              <span class="font-bold">Link:</span>
+              <a
+                class="text-blue-700 hover:underline"
+                href="http://linphasetechnology.com/"
+                target="_blank"
+                >http://linphasetechnology.com/</a
+              >
+            </li>
+          </ul>
+        </ul>
+      </section>
+
+      <!-- Achievements -->
+      <section class="mb-4 mt-3">
+        <h2 class="text-[18px] font-semibold border-b border-gray-300">
+          Certifications
+        </h2>
+        <ul class="list-disc ml-6 mt-2 space-y-1">
+          <li>AWS Solutions Architecture Job Simulation.</li>
+          <li class="list-disc mb-2 -mt-2">
+            <span class="font-bold">Link:</span>
+            <a
+              class="text-blue-700 hover:underline"
+              href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/pmnMSL4QiQ9JCgE3W/kkE9HyeNcw6rwCRGw_pmnMSL4QiQ9JCgE3W_CQ2Fb84gcNCMwBK7T_1734100419083_completion_certificate.pdf"
+              target="_blank"
+              >My certificate.</a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <!-- Education -->
+      <section class="mb-4">
+        <h2 class="text-[18px] font-semibold border-b border-gray-300">
+          Education
+        </h2>
+
+        <div class="mt-2">
+          <p class="font-semibold">Chandigarh University</p>
+          <ul class="ml-6 list-disc">
+            <li>Bachelor of Computer Applications (BCA)</li>
+            <li class="-mt-1">
+              Currently Pursuing – 2<sup>nd</sup> Year (Distance Learning)
+            </li>
+          </ul>
+        </div>
+
+        <div class="mt-4">
+          <p class="font-semibold">Self-Taught Web Developer</p>
+          <p>
+            Acquired practical skills in front-end and full-stack development
+            through independent learning using AI tools, online tutorials, and
+            developer resources on social platforms.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+
+  <script>
+    const main = document.getElementById("MainBox");
+    const help = document.getElementById("hlepNavigation");
+    const toggleBtn = document.getElementById("toggleButton");
+
+    let isMainOpen = false;
+
+    function render() {
+      main.classList.toggle("hidden", !isMainOpen);
+      help.classList.toggle("hidden", isMainOpen);
+    }
+
+    function handleToggle() {
+      isMainOpen = !isMainOpen;
+      render();
+    }
+
+    toggleBtn.addEventListener("click", handleToggle);
+
+    render();
+  </script>
 </html>
-
-
-
-
