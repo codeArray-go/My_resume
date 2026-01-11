@@ -30,80 +30,11 @@
       li {
         font-size: 15px;
       }
-
-      .list {
-        width: 100%;
-        background-color: rgba(255, 255, 255, 0.08);
-        border-radius: 10px;
-        text-align: center;
-        font-weight: 600;
-        margin-bottom: 12px;
-        font-size: 16px;
-        cursor: pointer;
-        padding: 12px;
-      }
-      .list:hover {
-        background-color: rgba(255, 255, 255, 0.178);
-      }
     </style>
   </head>
 
   <body class="bg-white text-gray-900">
-    <!-- Helping container -->
-    <div class="relative text-black">
-      <p
-        id="hlepNavigation"
-        class="block rounded-xl p-3 pe-20 border border-black fixed bottom-10 right-10"
-      >
-        To, contact developer
-      </p>
-      <a
-        id="toggleButton"
-        class="fixed bottom-10 right-10 cursor-pointer rounded-full p-2 font-semibold bg-gray-800 text-white shadow-gray-500 shadow-xl"
-      >
-        <img src="QuestionMark.svg" alt="download_button" />
-      </a>
-
-      <div
-        id="MainBox"
-        class="fixed bottom-24 right-16 h-[450px] w-[350px] rounded-xl rounded-br-none bg-green-50 shadow-lg shadow-gray-400 list-none z-10"
-      >
-        <h1
-          class="mb-2 rounded-lg border-gray-300 border-b text-center text-gray-600 font-bold text-xl Nunito p-5"
-        >
-          Billu Bhasanda
-        </h1>
-        <div class="w-full h-[70%] p-2 Nunito overflow-y-scroll">
-          <div class="w-full mb-2">
-            <li class="bg-gray-300 w-fit px-6 py-1 rounded-xl rounded-tl-sm">
-              Hi
-            </li>
-          </div>
-          <div class="w-full flex justify-end mb-2">
-            <li class="bg-gray-500 text-white w-fit px-6 py-1 rounded-xl rounded-br-sm">
-              Hi
-            </li>
-          </div>
-        </div>
-
-        <div
-          class="border-gray-300 border-t w-full py-2 absolute bottom-0 left-0 rounded-bl-xl"
-        >
-          <input
-            type="text"
-            placeholder="start typing..."
-            class="w-[95%] p-2 px-4 text-black block mx-auto bg-gray-300 rounded-l-xl rounded-r-full focus:outline-none"
-          />
-          <div
-            class="absolute bottom-2 right-2 bg-white rounded-full p-2 cursor-pointer"
-          >
-            <img src="Send.svg" alt="send" class="h-6 w-6" />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <main class="max-w-3xl mx-44 relative" id="pdf-content">
+    <main class="max-w-3xl mx-auto relative" id="pdf-content">
       <!-- Header -->
       <header class="mb-6 flex items-center flex-col">
         <h1 class="text-3xl font-bold">Akhil Singh Bhandari</h1>
@@ -146,6 +77,19 @@
         </p>
       </section>
 
+      <!-- Core Competencies -->
+      <section class="mb-4">
+        <h2 class="text-[18px] font-semibold border-b border-gray-300">
+          Core Competencies
+        </h2>
+
+        <p class="mt-2 text-[15px]">
+          React.js | Next.js | JavaScript | TypeScript | Node.js | Express.js |
+          MongoDB | REST APIs | Tailwind CSS | Full-Stack Development | Git |
+          GitHub | Responsive Web Design | Deployment | Authentication
+        </p>
+      </section>
+
       <!-- Technical Skills -->
       <section class="mb-4">
         <h2 class="text-[18px] font-semibold border-b border-gray-300">
@@ -153,7 +97,7 @@
         </h2>
         <div class="ml-6">
           <li class="mt-2">
-            <strong>Lnguage Known: </strong>JavaScript, TypeScript, Java
+            <strong>Languages: </strong>JavaScript, TypeScript, Java
           </li>
           <li>
             <strong>Frontend: </strong>HTML, CSS, JavaScript, React.js, Next.js,
@@ -258,26 +202,4 @@
       </section>
     </main>
   </body>
-
-  <script>
-    const main = document.getElementById("MainBox");
-    const help = document.getElementById("hlepNavigation");
-    const toggleBtn = document.getElementById("toggleButton");
-
-    let isMainOpen = false;
-
-    function render() {
-      main.classList.toggle("hidden", !isMainOpen);
-      help.classList.toggle("hidden", isMainOpen);
-    }
-
-    function handleToggle() {
-      isMainOpen = !isMainOpen;
-      render();
-    }
-
-    toggleBtn.addEventListener("click", handleToggle);
-
-    render();
-  </script>
 </html>
